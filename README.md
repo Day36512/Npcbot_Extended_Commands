@@ -2,11 +2,11 @@
 
 ## Overview
 
-Npcbot_Gear_Templates is a script that dumps level-based gear for easy NPC bot usage based on the player's level. Items are categorized in 5-level increments, with level 80 having an epic or rare set available. The item list has been gathered by Upskirt.
+Npcbot_Gear_Templates is an Eluna lua script that dumps level-based gear for easy NPC bot usage based on the player's level. Items are categorized in 5-level increments, with level 80 having an epic or rare set available. The item list has been gathered by Upskirt.
 
 ## Usage
 
-To use this script, type the following command in-game:
+To use this script, place the file in your lua_scripts folder and type the following in-game command:
 .bot items [role]
 
 
