@@ -58,9 +58,6 @@ local TankItems = {
     ["80_epic"] = {50640, 50627, 50660, 50968, 50691, 50612, 54579, 51901, 50978, 50622, 50642, 50356, 50364, 50718, 50738, 50729},
 }
 
-local requireGMForItemCommands = true
-
-
 local function OnBotCommandHandlerTwo(event, player, command)
     local args = {}
     for word in command:gmatch("%w+") do table.insert(args, word) end
