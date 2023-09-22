@@ -1,4 +1,4 @@
-local requireGMForItemCommands = true
+local requireGMForItemCommands = true -- Set to false to disable gm flag requirement
 
 local CasterItems = {
     [10] = {10657, 10553, 10820, 10047, 6191, 15452, 4767, 1449, 28303, 7739, 6505},
