@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is an Eluna lua script designed to enhance your NPC bot gameplay experience. It not only provides level-appropriate gear but also allows you to clear transmogs and set custom names for your bots. The gear is categorized in 5-level increments, starting at level 10 and extending up to level 80, where epic or rare sets are available. The script comes with an extensive list of valid roles and was curated by Upskirt, ensuring a broad range of gear options. It also features GM-only command options for additional security and control.
+This is an Eluna lua script designed to enhance your NPC bot gameplay experience. It not only provides level-appropriate gear but also allows you to clear transmogs and set custom names for your bots. The gear is categorized in 5-level increments, starting at level 10 and extending up to level 80, where epic or rare sets are available. The script comes with an extensive list of valid roles and the item list was mostly curated by Upskirt, ensuring a broad range of gear options. It also features GM-only command options for additional security and control.
 
 ## Usage
 
