@@ -29,7 +29,7 @@ The .bot nameset [new name] command sets the name of the targeted NPC Bot. The n
 - `twohanders`
 - `onehanders`
 - `ranged`
-- `arrows`
+- `arrows` // Arrows and Bullets aren't needed but I added them anyway.
 - `bullets`
 
 ## Important Notes
