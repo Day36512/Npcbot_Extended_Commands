@@ -1,6 +1,6 @@
 NpcBotCommands = {}
 
-local requireGMForItemCommands = true -- must use .gm on. This is only for items. Set to false to disable.
+local requireGMForItemCommands = true -- Require gm rank. This is only for items. Set to false to disable.
 
 local bot_script_names = {
     "mage_bot", "shaman_bot", "priest_bot", "warrior_bot", "hunter_bot", "rogue_bot",
@@ -82,8 +82,6 @@ end
 
 RegisterPlayerEvent(42, NpcBotCommands.OnCommandHandler)
 
-
-local requireGMForItemCommands = true
 
 local CasterItems = {
     [10] = {10657, 10553, 10820, 10047, 6191, 15452, 4767, 1449, 28303, 7739, 6505},
@@ -277,14 +275,21 @@ local Bullets = {
 
 
 local function OnBotCommandHandlerTwo(event, player, command)
-    local args = {}
+      local args = {}
     for word in command:gmatch("%w+") do table.insert(args, word) end
+
+    -- Debug: Print requireGMForItemCommands value and player GM rank
+    print("Debug - requireGMForItemCommands: " .. tostring(requireGMForItemCommands))
+    print("Debug - player GM rank: " .. player:GetGMRank())
 
     if args[1] ~= "bot" or args[2] ~= "items" then
         return true
     end
-	
-    if requireGMForItemCommands and not player:IsGM() then
+    
+    -- Check player's GM rank
+    local gmRank = player:GetGMRank()
+
+    if requireGMForItemCommands == true and gmRank == 0 then
         player:SendBroadcastMessage("You do not have permission to use this command.")
         return false
     end
@@ -308,7 +313,7 @@ local function OnBotCommandHandlerTwo(event, player, command)
 
     if role == "caster" then
         itemList = CasterItems[level]
-    elseif role == "leatherdps" then  -- Changed "physical" to "leatherdps"
+    elseif role == "leatherdps" then
         itemList = PhysicalItems[level]
     elseif role == "tank" then
         itemList = TankItems[level]
@@ -335,7 +340,6 @@ local function OnBotCommandHandlerTwo(event, player, command)
         player:SendBroadcastMessage("No items found for the given criteria. Usage: .bot items [role].")
         return false
     end
-	
 
     for _, itemID in ipairs(itemList) do
         local itemCount = 1  -- default item count
@@ -352,4 +356,5 @@ local function OnBotCommandHandlerTwo(event, player, command)
 end
 
 RegisterPlayerEvent(42, OnBotCommandHandlerTwo)
+
 
