@@ -278,10 +278,6 @@ local function OnBotCommandHandlerTwo(event, player, command)
       local args = {}
     for word in command:gmatch("%w+") do table.insert(args, word) end
 
-    -- Debug: Print requireGMForItemCommands value and player GM rank
-    print("Debug - requireGMForItemCommands: " .. tostring(requireGMForItemCommands))
-    print("Debug - player GM rank: " .. player:GetGMRank())
-
     if args[1] ~= "bot" or args[2] ~= "items" then
         return true
     end
