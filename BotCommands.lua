@@ -6,7 +6,7 @@ local bot_script_names = {
     "mage_bot", "shaman_bot", "priest_bot", "warrior_bot", "hunter_bot", "rogue_bot",
     "warlock_bot", "paladin_bot", "druid_bot", "deathknight_bot", "dreadlord_bot",
     "sphynx_bot", "blademaster_bot", "spellbreaker_bot", "seawitch_bot", "necromancer_bot",
-    "dreadlord_bot"
+    "dreadlord_bot", "death_knight_bot"
 }
 
 local function isValidBotScriptName(scriptName)
@@ -275,9 +275,8 @@ local Bullets = {
 
 
 local function OnBotCommandHandlerTwo(event, player, command)
-      local args = {}
+    local args = {}
     for word in command:gmatch("%w+") do table.insert(args, word) end
-
     if args[1] ~= "bot" or args[2] ~= "items" then
         return true
     end
