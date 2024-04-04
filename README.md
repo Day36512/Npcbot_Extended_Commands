@@ -32,7 +32,7 @@ The .bot nameset [new name] command sets the name of the targeted NPC Bot. The n
 - `arrows` // Arrows and Bullets aren't needed but I added them anyway.
 - `bullets`
 
-##Other Chat Options
+## Other Chat Options
 I've included another lua script primarily focused on Mage Portals. I realize trickerer recently update mage gossip items to include portals, but I still prefer chat options for this function and having a reagent requirement. If you want to have a reagent requirement core side as well, you'll have to modify that yourself.
 
 Chats:
