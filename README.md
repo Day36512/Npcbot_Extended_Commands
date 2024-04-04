@@ -33,7 +33,7 @@ The .bot nameset [new name] command sets the name of the targeted NPC Bot. The n
 - `bullets`
 
 ## Other Chat Options
-I've included another lua script primarily focused on Mage Portals. I realize trickerer recently update mage gossip items to include portals, but I still prefer chat options for this function and having a reagent requirement. If you want to have a reagent requirement core side as well, you'll have to modify that yourself.
+I've included another lua script primarily focused on Mage Portals. I realize trickerer recently update mage gossip items to include portals, but I still prefer chat options for this function and having a reagent requirement. If you want to have a reagent requirement core side as well and you're not playing my repack, you'll have to modify that yourself.
 
 Chats:
 - Typing out a greeting such as hi or hello or what's up etc will ellicit a response from a nearby bot
